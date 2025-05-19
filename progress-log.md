@@ -10,3 +10,12 @@
 
 - Solved LeetCode #1 Two Sum and fully understood hash map approach.
 - Felt very sleepy, so postponed the second problem to tomorrow. (#20 Valid Parentheses)
+
+## 2025-05-20
+
+- ✅ Solved LeetCode #20: Valid Parentheses  
+  - Used a stack to match open and close brackets.  
+  - Realized it's very similar to MTG’s stack resolution—LIFO behavior.  
+  - Code became elegant (possibly AI-influenced), but I fully understood the logic.  
+  - `return not stack` means all open brackets have been matched and removed. 
+  - I learned LIFO behavior by coding and could image clearly than before.
