@@ -22,9 +22,19 @@
 
 ## 2025-05-20
 
-- ✅ Solved LeetCode #121: Best Time to Buy and Sell Stock
-  - Explored multiple strategies, and chose the cleanest O(n) solution using a min_price tracker.
-- 🎯 Reached the third LeetCode goal for Week 1
-- 🧠 Deeply reflected on efficiency vs readability and testability
-  - Simple is best.（結局、シンプルが最強。）
+### 🧠 LeetCode
+
+- ✅ Solved LeetCode #121: Best Time to Buy and Sell Stock  
+  - Explored multiple strategies, and chose the cleanest O(n) solution using a min_price tracker.  
+- 🎯 Reached the third LeetCode goal for Week 1  
+- 🧠 Deeply reflected on efficiency vs readability and testability  
+  - Simple is best.（結局、シンプルが最強。）  
   - 凝ったロジックよりも、わかりやすさ・テストしやすさが実務では勝る。
+
+### 🐳 Docker
+
+- ✅ Resolved Docker Desktop issues via reinstallation  
+- ✅ Successfully built and ran Docker container with custom main.py  
+  - Output confirmed: "Hello, Docker!"
+  - First hands-on Docker experience achieved. Container basics now understood.
+  - Simple is best. One small build for a container, one giant leap for reproducibility.
