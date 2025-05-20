@@ -1,7 +1,6 @@
-from fastapi import FastAPI
+def main():
+    print("Hello, Docker!")
 
-app = FastAPI()
 
-@app.get("/")
-def read_root():
-    return {"message": "Hello, Docker!"}
+if __name__ == "__main__":
+    main()
