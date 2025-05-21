@@ -1,6 +1,6 @@
 # Progress Log
 
-## 2025-05-21
+## **2025-05-21**
 
 ### 🧠 LeetCode
 - ✅ Solved LeetCode #125: Valid Palindrome
@@ -12,7 +12,7 @@
 ### 🐳 Docker
 - No new changes today. Environment verified yesterday.
 
-## 2025-05-20
+## **2025-05-20**
 
 ### 🧠 LeetCode
 
@@ -31,7 +31,7 @@
   - First hands-on Docker experience achieved. Container basics now understood.
   - Simple is best. One small build for a container, one giant leap for reproducibility.
 
-## 2025-05-19
+## **2025-05-19**
 
 - ✅ Solved LeetCode #20: Valid Parentheses  
   - Used a stack to match open and close brackets.  
@@ -40,12 +40,12 @@
   - `return not stack` means all open brackets have been matched and removed. 
   - I learned LIFO behavior by coding and could image clearly than before.
 
-## 2025-05-18
+## **2025-05-18**
 
 - Solved LeetCode #1 Two Sum and fully understood hash map approach.
 - Felt very sleepy, so postponed the second problem to tomorrow. (#20 Valid Parentheses)
 
-## 2025-05-17
+## **2025-05-17**
 
 - Learned the conceptual difference between Docker Image (like a class) and Container (like an instance).
 - Understood why devcontainers in VS Code trigger `docker build` automatically.
