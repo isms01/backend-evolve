@@ -38,3 +38,15 @@
   - Output confirmed: "Hello, Docker!"
   - First hands-on Docker experience achieved. Container basics now understood.
   - Simple is best. One small build for a container, one giant leap for reproducibility.
+
+## 2025-05-21
+
+### 🧠 LeetCode
+- ✅ Solved LeetCode #125: Valid Palindrome
+  - Cleaned and normalized input string
+  - Used slicing and alphanumeric filtering to verify palindrome
+  - Learned about generator expressions and `[::-1]` slicing
+  - Simple is best. Pythonic and elegant.
+
+### 🐳 Docker
+- No new changes today. Environment verified yesterday.
