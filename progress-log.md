@@ -11,6 +11,9 @@
 - Clearly understood the technique and explained it in my own words
   > “Skip zeros, shift non-zero values forward, then zero-fill”
 
+### 🐳 Docker
+- Confirm ENV command to change environment variable value
+
 ### 💡 Key Takeaways
 - Not just solving the problem, but understanding *why* it works and *when* to use it
 - Writing and organizing knowledge improves clarity and recall
