@@ -1,5 +1,9 @@
+import os
+
+
 def main():
-    print("Hello, Docker!")
+    app_env = os.environ.get("APP_ENV", "production")
+    print(f"Hello, Docker! Running in {app_env} mode.")
 
 
 if __name__ == "__main__":
