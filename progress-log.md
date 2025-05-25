@@ -1,5 +1,25 @@
 # Progress Log
 
+## **2025-05-22**
+
+### 🧠 LeetCode
+- ✅ Solved LeetCode #88: Merge Sorted Array
+- Learned the difference between `sorted(nums1)` (non-destructive) and `nums1.sort()` (in-place).
+- Realized that `sorted()` does not modify the original list, which caused the LeetCode checker to fail the result.
+- Discussed and explored Timsort, the algorithm behind `sorted()`, and gained a better understanding of how Python sorts work.
+
+
+### 🐳 Docker
+- ✅ Edited the Dockerfile to include a new `RUN echo` step.
+- Rebuilt the image and confirmed that `/echo_test.txt` exists within the container.
+- Understood the difference between Docker image and container state:
+  - Files created during `docker build` persist in all containers spawned from the image.
+  - Changes inside a running container do not persist unless the container is kept alive or committed.
+- ✅ Learned the correct development workflow:
+  - Use `docker run` once to start a container
+  - Use `docker exec` for further access to that same container without restarting
+
+
 ## **2025-05-21**
 
 ### 🧠 LeetCode
