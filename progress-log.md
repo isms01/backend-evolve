@@ -1,5 +1,26 @@
 # Progress Log
 
+## **2025-05-25**
+
+### 🧠 LeetCode
+- ✅ Organized and committed LeetCode #283: Move Zeroes
+- Reflected on the technique: Two-Pointer Compaction
+  - Shift non-zero elements forward while maintaining their order
+  - Fill the remaining positions with zeroes
+  - In-place operation with O(n) time and O(1) space
+- Clearly understood the technique and explained it in my own words
+  > “Skip zeros, shift non-zero values forward, then zero-fill”
+
+### 💡 Key Takeaways
+- Not just solving the problem, but understanding *why* it works and *when* to use it
+- Writing and organizing knowledge improves clarity and recall
+- Keeping a single `progress-log.md` file makes daily tracking more efficient
+
+### ✅ Next step
+- Solve LeetCode #1672 and reflect on the `sum-max for 2D list` pattern
+
+
+
 ## **2025-05-22**
 
 ### 🧠 LeetCode
