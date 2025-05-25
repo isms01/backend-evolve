@@ -1,5 +1,22 @@
 # Progress Log
 
+## **2025-05-26**
+
+### 🧠 LeetCode
+- ✅ Solved LeetCode #1672: Richest Customer Wealth  
+  [🔗 Submission Link](https://leetcode.com/problems/richest-customer-wealth/submissions/1644168345/)
+- Practiced nested loops and max value tracking across rows in a 2D list.
+
+### 🐳 Docker
+- ✅ Added `ENV APP_ENV=development` to Dockerfile
+- ✅ Modified `main.py` to print current environment from `os.environ`
+- Verified environment-specific behavior:
+  - On local execution, defaulted to `"production"` mode
+  - On Docker container execution, showed `"development"` mode as set in Dockerfile
+- Understood path resolution differences between local and container environments:
+  - `main.py` is located at `/app`, so direct `python main.py` works inside the container
+
+
 ## **2025-05-25**
 
 ### 🧠 LeetCode
