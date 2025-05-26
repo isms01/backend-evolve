@@ -4,12 +4,19 @@
 
 ### 🧠 LeetCode
 - ✅ Solved LeetCode #412: Fizz Buzz
-- Used boolean flag to avoid else logic; added "Fizz"/"Buzz" using string concatenation.
-- Learned to build up output step by step and handle multiple conditions cleanly.
+- Used a boolean flag and string concatenation to produce "Fizz", "Buzz", or "FizzBuzz" based on divisibility.
+- Reinforced control flow basics with conditional checks and list appending.
 
-### 🐳 Docker
-- [ ] (Planned) Create `scheduler.py` with basic Scheduler class
-- [ ] (Planned) Add CLI input in `main.py` to register a simple schedule
+### 🐳 Docker / Backend-evolve
+- ✅ Created `scheduler.py` with `Scheduler` class to add and list events
+- ✅ Implemented `main.py` CLI loop to register schedule input (e.g., "2025-05-31 Watch movie GodFather")
+- ✅ Handled input errors with `try-except` blocks, including ValueError and EOFError
+- ✅ Understood `f-string` pitfalls with quote usage and resolved syntax error
+- ✅ Ran program via `python -m app.main` successfully
+- Learned:
+  - How to parse and split user input
+  - How to gracefully handle runtime interruptions (EOFError)
+  - Why Python CLI apps need error tolerance and safe exit handling
 
 
 ## **2025-05-26**
