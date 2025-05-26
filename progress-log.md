@@ -1,5 +1,17 @@
 # Progress Log
 
+## **2025-05-27**
+
+### 🧠 LeetCode
+- ✅ Solved LeetCode #412: Fizz Buzz
+- Used boolean flag to avoid else logic; added "Fizz"/"Buzz" using string concatenation.
+- Learned to build up output step by step and handle multiple conditions cleanly.
+
+### 🐳 Docker
+- [ ] (Planned) Create `scheduler.py` with basic Scheduler class
+- [ ] (Planned) Add CLI input in `main.py` to register a simple schedule
+
+
 ## **2025-05-26**
 
 ### 🧠 LeetCode
