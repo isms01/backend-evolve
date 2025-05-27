@@ -1,6 +1,25 @@
 # Progress Log
 
-## **2025-05-27**
+## **2025-05-27** (Midnight)
+
+### 🧠 LeetCode
+- ✅ Solved LeetCode #509: Fibonacci Number
+- Implemented a clean recursive solution with base cases for 0 and 1.
+- ✅ Solved LeetCode #1137: N-th Tribonacci Number
+- Initially encountered TLE using naive recursion.
+- Resolved the issue by applying `@lru_cache(maxsize=None)` to memoize previously computed results.
+- Deepened understanding of:
+  - Recursive function structure with base case and decomposition
+  - Exponential time complexity and how caching mitigates it
+  - Python’s `@lru_cache` and its internal hash-based caching mechanism
+
+### 🐳 Docker / Backend-evolve
+- 💡 Decided to use pandas DataFrame to manage event data in memory
+- 💾 Chose JSON format as the persistent storage format
+- Planned: read/write integration with `pandas.read_json()` / `to_json()` and CLI interface enhancements
+
+
+## **2025-05-27** 
 
 ### 🧠 LeetCode
 - ✅ Solved LeetCode #412: Fizz Buzz
