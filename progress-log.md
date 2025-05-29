@@ -1,5 +1,18 @@
 # Progress Log
 
+## **2025-05-29**
+
+### 🧠 LeetCode
+- ✅ Solved LeetCode #746: Min Cost Climbing Stairs
+- Implemented a dynamic programming solution using an array.
+- Compared with an optimized solution using two variables (`prev1`, `prev2`) instead of a full array.
+- Learned the trade-off between memory usage and readability. Constant space DP is elegant and efficient.
+
+### 🐳 Docker / GitHub
+- 🤒 No code updates due to feeling unwell.
+- Only updated the progress log for the day.
+
+
 ## **2025-05-27** (Midnight)
 
 ### 🧠 LeetCode
