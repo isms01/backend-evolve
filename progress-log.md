@@ -1,5 +1,24 @@
 # Progress Log
 
+## **2025-06-03**
+
+### 🧠 LeetCode
+- ✅ Solved LeetCode #35: Search Insert Position
+- **GitHub**: [0035_search_insert_position.py](https://github.com/isms01/backend-evolve/blob/main/leetcode/easy/0035_search_insert_position.py)
+- **What I learned**:
+  - Practiced binary search and edge handling (e.g., inserting before/after all elements).
+  - Used loop-based and bisect-based approaches.
+  - Realized the importance of handling sorted input efficiently (O(log n)).
+
+### 🐳 Docker
+- ✅ Ran `docker run -it python:3.10` to enter interactive Python shell
+- ✅ Mounted host directory and executed a Python script:
+  ```bash
+  docker run -it -v $(pwd):/app -w /app python:3.10 python hello.py
+- What I learned
+  - What containers and images are, and how to launch lightweight dev environments.
+
+
 ## **2025-05-29**
 
 ### 🧠 LeetCode
