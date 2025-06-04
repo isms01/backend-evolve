@@ -1,5 +1,15 @@
 # Progress Log
 
+## **2025-06-05**
+
+### 🧠 LeetCode
+- ✅ Solved LeetCode #136: Single Number
+- Learned the power of XOR: same numbers cancel each other out, leaving the unique number.
+- Impressed by how XOR enables constant space and O(n) time solution.
+
+### 🐳 Docker / DevOps
+- (No updates today)
+
 ## **2025-06-03**
 
 ### 🧠 LeetCode
