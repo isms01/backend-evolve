@@ -5,9 +5,12 @@
 ### 🧠 LeetCode
 - ✅ Solved LeetCode #0217: Contains Duplicate
   - Used `set()` to detect duplicates efficiently in O(n) time.
+    - Used `set()` because it can be remove duplicates.
   - Learned the benefit of using set for quick membership checks.
 - ✅ Solved LeetCode #0383: Ransom Note
   - Applied `collections.Counter` to compare character frequencies.
+    - Used `collections.Counter` because the key is the needs of use letters from the magazine to ransom Note.
+    - This problem can be solved if we can confirm that the number of occurrencies of each letter is also in magazine.
   - Understood how to subtract one Counter from another and use the result to determine feasibility.
 
 
