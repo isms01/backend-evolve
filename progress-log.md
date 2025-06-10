@@ -1,5 +1,16 @@
 # Progress Log
 
+## **2025-06-10**
+
+### 🧠 LeetCode
+- ✅ Solved LeetCode #0217: Contains Duplicate
+  - Used `set()` to detect duplicates efficiently in O(n) time.
+  - Learned the benefit of using set for quick membership checks.
+- ✅ Solved LeetCode #0383: Ransom Note
+  - Applied `collections.Counter` to compare character frequencies.
+  - Understood how to subtract one Counter from another and use the result to determine feasibility.
+
+
 ## **2025-06-05**
 
 ### 🧠 LeetCode
