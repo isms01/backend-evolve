@@ -1,5 +1,16 @@
 # Progress Log
 
+## **2025-06-11**
+
+### 🧠 LeetCode
+- ✅ Solved LeetCode #53: Maximum Subarray
+- Learned Kadane’s Algorithm and how to track max subarray sum dynamically.
+
+### 🐳 GitHub Actions
+- ✅ Drafted logic for detecting new LeetCode files and updating progress-log.md.
+- Planned the update script and decided on workflow trigger conditions.
+
+
 ## **2025-06-10**
 
 ### 🧠 LeetCode
