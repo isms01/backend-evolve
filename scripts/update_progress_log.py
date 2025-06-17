@@ -1,36 +1,32 @@
-import datetime
-import os
+import json
+from datetime import datetime
 from pathlib import Path
 
 LEETCODE_ROOT = Path("leetcode")
 PROGRESS_LOG = Path("progress-log.md")
 
 
-def extract_info(filepath: Path):
-    number_str, rest = filepath.stem.split("_", 1)
-    number = int(number_str)
-    title = rest.replace("_", " ").title()
+def extract_info(file_path: Path):
+    parts = file_path.stem.split("_", 1)
+    number = parts[0].lstrip("0")
+    title = parts[1].replace("_", " ").title() if len(parts) > 1 else "Unknown"
     return number, title
 
 
 def find_today_files():
-    today = datetime.date.today()
+    today = datetime.now().date()
     changed = []
     for category in ["easy", "medium", "hard"]:
-        dir_path = LEETCODE_ROOT / category
-        if not dir_path.exists():
-            continue
-        for file in dir_path.glob("*.py"):
-            mtime = datetime.date.fromtimestamp(file.stat().st_mtime)
-            if mtime == today:
+        for file in (LEETCODE_ROOT / category).glob("*.py"):
+            if datetime.fromtimestamp(file.stat().st_mtime).date() == today:
                 changed.append(file)
     return changed
 
 
 def update_progress_log():
-    today_str = datetime.date.today().isoformat()
-    header = f"## **{today_str}**\n\n"
-    leetcode_section = "### 🧠 LeetCode\n"
+    today_str = datetime.now().date().isoformat()
+    header = f"## {today_str}"
+    leetcode_section = "### 🧠 LeetCode"
 
     updated_files = find_today_files()
     if not updated_files:
@@ -41,9 +37,11 @@ def update_progress_log():
     for file in sorted(updated_files):
         number, title = extract_info(file)
         entries.append(
-            f"- ✅ Solved LeetCode #{number:04d}: {title}\n  - Added via GitHub Actions."
+            f"- ✅ Solved LeetCode #{number}: {title} – Added via GitHub Actions."
         )
-    log_block = header + leetcode_section + "\n".join(entries) + "\n\n"
+
+    log_block = header + "\n\n" + leetcode_section + "\n" + "\n".join(entries) + "\n\n"
+
     with open(PROGRESS_LOG, "a", encoding="utf-8") as f:
         f.write(log_block)
 
