@@ -2,9 +2,9 @@ name: Update Progress Log
 on:
   push:
     paths:
-      - 'leetcode/easy/*.py'
-      - 'leetcode/medium/*.py'
-      - 'leetcode/hard/*.py'
+      - 'leetcode/easy/**/*.py'
+      - 'leetcode/medium/**/*.py'
+      - 'leetcode/hard/**/*.py'
     branches:
       - main
 jobs:
