@@ -1,52 +1,74 @@
-from datetime import datetime
-from pathlib import Path
+import os
+import re
+from datetime import date
 
-LEETCODE_ROOT = Path("leetcode")
-PROGRESS_LOG = Path("progress-log.md")
-
-
-def extract_info(file_path: Path):
-    parts = file_path.stem.split("_", 1)
-    number = parts[0].lstrip("0")
-    title = parts[1].replace("_", " ").title() if len(parts) > 1 else "Unknown"
-    return number, title
+PROGRESS_LOG_PATH = "progress-log.md"
+LEETCODE_DIR = "leetcode/easy"
 
 
-def find_today_files():
-    today = datetime.now().date()
-    changed = []
-    for category in ["easy", "medium", "hard"]:
-        for file in (LEETCODE_ROOT / category).glob("*.py"):
-            if datetime.fromtimestamp(file.stat().st_mtime).date() == today:
-                changed.append(file)
-    return changed
+def extract_number_and_title(filename: str):
+    match = re.match(r"(\d+)_([a-z0-9_]+)\.py", filename)
+    if match:
+        number = int(match.group(1))
+        title = match.group(2).replace("_", " ").title()
+        return number, title
+    return None, None
 
 
-def update_progress_log():
-    today_str = datetime.now().date().isoformat()
-    header = f"## {today_str}"
-    leetcode_section = "### 🧠 LeetCode"
+def format_entry(number: int, title: str):
+    return f"- ✅ Solved LeetCode #{number}: {title} – Added via GitHub Actions."
 
-    updated_files = find_today_files()
-    if not updated_files:
-        print("No updated LeetCode files today.")
+
+def main():
+    today = date.today().isoformat()
+    new_entries = []
+
+    # Get existing log content
+    if not os.path.exists(PROGRESS_LOG_PATH):
+        with open(PROGRESS_LOG_PATH, "w") as f:
+            f.write("# Progress Log\n")
+
+    with open(PROGRESS_LOG_PATH, "r", encoding="utf-8") as f:
+        lines = f.readlines()
+
+    # Check which problems are already logged
+    logged_problems = set()
+    for line in lines:
+        match = re.search(r"LeetCode #(\d+):", line)
+        if match:
+            logged_problems.add(int(match.group(1)))
+
+    # Scan leetcode files and find new ones
+    for filename in os.listdir(LEETCODE_DIR):
+        number, title = extract_number_and_title(filename)
+        if number and number not in logged_problems:
+            new_entries.append(format_entry(number, title))
+
+    if not new_entries:
+        print("✅ No new problems to add.")
         return
 
-    entries = []
-    for file in sorted(updated_files):
-        number, title = extract_info(file)
-        entries.append(
-            f"- ✅ Solved LeetCode #{number}: {title} – Added via GitHub Actions."
-        )
+    # Create new log block
+    log_block = [f"## **{today}**\n", "\n", "### 🧠 LeetCode\n"]
+    for entry in sorted(new_entries):
+        log_block.append(entry + "\n")
+    log_block.append("\n\n")
 
-    log_block = header + "\n\n" + leetcode_section + "\n" + "\n".join(entries) + "\n\n"
+    # Insert new block after "# Progress Log"
+    for i, line in enumerate(lines):
+        if line.strip() == "# Progress Log":
+            insert_index = i + 1
+            break
+    else:
+        insert_index = 0  # fallback
 
-    with open(PROGRESS_LOG, "r", encoding="utf-8") as f:
-        current_log = f.read()
+    updated_lines = lines[:insert_index] + log_block + lines[insert_index:]
 
-    with open(PROGRESS_LOG, "w", encoding="utf-8") as f:
-        f.write(log_block + current_log)
+    with open(PROGRESS_LOG_PATH, "w", encoding="utf-8") as f:
+        f.writelines(updated_lines)
+
+    print(f"📝 Inserted {len(new_entries)} new entries for {today}.")
 
 
 if __name__ == "__main__":
-    update_progress_log()
+    main()
