@@ -12,7 +12,7 @@ class ListNode:
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
         cur = head  # pointer to traverse the linked list
-        visited = set()
+        visited = set()  # to keep track of visited nodes
         while cur:
             if cur in visited:
                 return True
