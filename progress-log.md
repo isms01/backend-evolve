@@ -1,20 +1,3 @@
-## 2025-06-18
-
-### 🧠 LeetCode
-- ✅ Solved LeetCode #: Dummy File – Added via GitHub Actions.
-- ✅ Solved LeetCode #35: Search Insert Position – Added via GitHub Actions.
-- ✅ Solved LeetCode #104: Maximum Depth Of Binary Tree – Added via GitHub Actions.
-- ✅ Solved LeetCode #136: Single Number – Added via GitHub Actions.
-- ✅ Solved LeetCode #141: Linked List – Added via GitHub Actions.
-- ✅ Solved LeetCode #217: Contains Duplicate – Added via GitHub Actions.
-- ✅ Solved LeetCode #242: Valid Anagram – Added via GitHub Actions.
-- ✅ Solved LeetCode #283: Move Zeroes – Added via GitHub Actions.
-- ✅ Solved LeetCode #383: Ransom Note – Added via GitHub Actions.
-- ✅ Solved LeetCode #509: Fibonacci Number – Added via GitHub Actions.
-- ✅ Solved LeetCode #1046: Last Stone Weight – Added via GitHub Actions.
-- ✅ Solved LeetCode #1137: Tribonacci Number – Added via GitHub Actions.
-- ✅ Solved LeetCode #53: Maximum Subarray – Added via GitHub Actions.
-
 # Progress Log
 
 ## **2025-06-11**
