@@ -41,8 +41,11 @@ def update_progress_log():
 
     log_block = header + "\n\n" + leetcode_section + "\n" + "\n".join(entries) + "\n\n"
 
-    with open(PROGRESS_LOG, "a", encoding="utf-8") as f:
-        f.write(log_block)
+    with open(PROGRESS_LOG, "r", encoding="utf-8") as f:
+        current_log = f.read()
+
+    with open(PROGRESS_LOG, "w", encoding="utf-8") as f:
+        f.write(log_block + current_log)
 
 
 if __name__ == "__main__":
