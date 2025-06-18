@@ -7,6 +7,14 @@
 - ✅ Solved LeetCode #141: Linked List – Added via GitHub Actions.
 - ✅ Solved LeetCode #242: Valid Anagram – Added via GitHub Actions.
 
+### 🐳 GitHub Actions
+- ✅ Updated the `update_progress_log.py` script to insert new logs **below** the `# Progress Log` title, as requested.
+- ✅ Extended support for `leetcode/medium` and `leetcode/hard` directories (previously only `easy/` was supported).
+- ✅ Implemented duplicate detection to skip logging files already recorded in `progress-log.md`.
+- ✅ Learned and executed `git pull origin main --rebase` to avoid merge conflicts when local progress is behind.
+- ✅ Diagnosed a push failure in GitHub Actions due to insufficient permissions.
+- ✅ Corrected the root cause by setting `Workflow permissions` to `Read and write permissions` under repository settings.
+- 🧠 Learned that this is essential for enabling GitHub Actions to push updates to `progress-log.md`.
 
 
 ## **2025-06-11**
