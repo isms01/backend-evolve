@@ -1,9 +1,10 @@
 import os
 import re
 from datetime import date
+from pathlib import Path
 
-PROGRESS_LOG_PATH = "progress-log.md"
-LEETCODE_DIR = "leetcode/easy"
+PROGRESS_LOG_PATH = "progress-log_test.md"
+LEETCODE_DIR = ["leetcode/easy", "leetcode/medium", "leetcode/hard"]
 
 
 def extract_number_and_title(filename: str):
@@ -39,10 +40,13 @@ def main():
             logged_problems.add(int(match.group(1)))
 
     # Scan leetcode files and find new ones
-    for filename in os.listdir(LEETCODE_DIR):
-        number, title = extract_number_and_title(filename)
-        if number and number not in logged_problems:
-            new_entries.append(format_entry(number, title))
+    for dir_name in LEETCODE_DIR:
+        if not Path(dir_name).is_dir():
+            continue
+        for file_path in Path(dir_name).glob("*.py"):
+            number, title = extract_number_and_title(file_path.name)
+            if number and number not in logged_problems:
+                new_entries.append((number, title))
 
     if not new_entries:
         print("✅ No new problems to add.")
@@ -50,8 +54,8 @@ def main():
 
     # Create new log block
     log_block = [f"## **{today}**\n", "\n", "### 🧠 LeetCode\n"]
-    for entry in sorted(new_entries):
-        log_block.append(entry + "\n")
+    for number, title in sorted(new_entries):
+        log_block.append(format_entry(number, title) + "\n")
     log_block.append("\n\n")
 
     # Insert new block after "# Progress Log"
