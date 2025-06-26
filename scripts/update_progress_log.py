@@ -3,7 +3,7 @@ import re
 from datetime import date
 from pathlib import Path
 
-PROGRESS_LOG_PATH = "progress-log_test.md"
+PROGRESS_LOG_PATH = "progress-log.md"
 LEETCODE_DIR = ["leetcode/easy", "leetcode/medium", "leetcode/hard"]
 
 
