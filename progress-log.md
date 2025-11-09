@@ -1,4 +1,11 @@
 # Progress Log
+## **2025-11-09**
+
+### 🧠 LeetCode
+- ✅ Solved LeetCode #9: Palindrome Number – Added via GitHub Actions.
+- ✅ Solved LeetCode #13: Roman To Integer – Added via GitHub Actions.
+
+
 ## **2025-06-18**
 
 ### 🧠 LeetCode
