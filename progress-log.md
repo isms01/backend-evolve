@@ -1,4 +1,8 @@
 # Progress Log
+## **2025-11-17**
+### AI agent dev
+- No progress today due to overworking at the office. 
+
 ## **2025-11-09**
 
 ### 🧠 LeetCode
